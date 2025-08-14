@@ -618,7 +618,7 @@
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-\[url\(\'\.\/img\/bgcernobile\.png\'\)\] {
-    background-image: url('./img/bgcernobile.png');
+    background-image: url('./img/bgcernobile.jpg');
   }
   .from-transparent {
     --tw-gradient-from: transparent;
