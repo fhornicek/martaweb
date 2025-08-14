@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+.dela-gothic {
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.roboto {
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mask-svg {
+    -webkit-mask-image: url('./img/scratch.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover; /* or contain, depending on what you need */
+    -webkit-mask-position: center;
+    
+    mask-image: url('./img/scratch.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover; /* or contain */
+    mask-position: center;
+  }
+
+
+  .bg-custom-green {
+    background-color: #478D52;
+  }
+
+  .bg-custom-dark {
+    background-color: #161616;
+  }
+
+  .bg-divider {
+    background-color: #292929;
+  }
+
+  .text-custom-green {
+    color: #478D52;
+  }
+
+  .swiper {
+    --swiper-navigation-color: #FFFF; 
+    --swiper-pagination-color: #478D52;
+    --swiper-pagination-bullet-inactive-color: white; 
+    --swiper-pagination-bullet-inactive-opacity: 1; 
+}
+
+.men-pagination {
+    --swiper-pagination-bullet-inactive-color: white; 
+    --swiper-pagination-bullet-inactive-opacity: 1; 
+    --swiper-pagination-color: #478D52;
+    position: relative !important;
+}
+
+.women-pagination {
+    --swiper-pagination-bullet-inactive-color: white; 
+    --swiper-pagination-bullet-inactive-opacity: 1; 
+    --swiper-pagination-color: #478D52;
+    position: relative !important;
+}
+
+.yt-pagination {
+  position: relative !important;
+}
+
+.cta-gradient-bg {
+  background: linear-gradient(to bottom, #478D52, #36643E);
+}
+
+.slide-content {
+  background-color: transparent; /* zajistí průhledné pozadí, když je obsah skryt */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateX(20px);
+  padding-top: 0; /* reset padding na začátku */
+  padding-bottom: 0;
+}
+
+.slide-content.active {
+  max-height: 500px; /* dostatečný max-height pro obsah */
+  opacity: 1;
+  transform: translateX(0);
+  padding-top: 1rem; /* 16px odpovídá Tailwind pt-4 (tady pt-2 máš, lze upravit) */
+  padding-bottom: 1rem; /* pro pěkné odsazení */
+}
+
+#team {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+.slide-out-down {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.slide-in-down {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.slide-in-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+ /* Lightbox overlay */
+ #lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+/* Lightbox image */
+#lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+}
+/* Close button */
+#lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  z-index: 10000;
+}

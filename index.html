@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO BEYOND TEAM</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="bg-custom-dark roboto tracking-wide">
+
+  <section class="h-screen sm:[98vh] bg-cover bg-center bg-[url('./img/bgcernobile.png')] relative">
+    <div class="absolute inset-0 bg-gradient-to-l from-transparent to-black/60"></div>
+  
+    <div class="absolute inset-0 flex justify-center items-center">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center sm:justify-between h-full px-4">
+        <div class="w-1/2 flex flex-col items-center text-center md:items-start md:text-left justify-center z-1">
+            <h1 class="dela-gothic font-black text-[15vw] sm:mb-3 sm:text-[12vw] md:text-[15vh] text-white leading-none">
+                GO<br>
+                BEYOND<br>
+            </h1>
+            
+            <h1 class="dela-gothic font-black text-[15vw] sm:text-[12vw] md:text-[15vh] text-white leading-none transition-opacity duration-1000 overflow:hidden" id="team">TEAM.</h1>
+        </div>
+  
+        <div class="hidden md:flex md:justify-end md:items-end">
+            <img src="src/img/martapng.png" alt="Martin Rozumek" class="absolute bottom-0 scale-x-[-1] w-[38%] no-lightbox">
+        </div>
+  
+    </div>
+      <div class="absolute bottom-24 sm:bottom-10  left-1/2 transform -translate-x-1/2 z-20" id="arrow">
+        <svg class="w-[50px] h-[50px] fill-[#ffffff]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+          <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="skew-y-2 bg-neutral-900 transform pb-12 -mb-[70px]">
+    <div class="p-6 -mt-10 inset-0 bg-divider"></div>
+  </div>
+
+  <section class="bg-neutral-900 text-white">
+    <div class="container mt-20 sm:mt-0 mx-auto overflow-hidden sm:h-[80vh] sm:overflow-hidden flex flex-col md:flex-row gap-6 md:gap-2 px-4">
+      <div class="w-full md:w-3/5 flex justify-center items-center aspect-[4/3] overflow-hidden">
+        <img id="photo" src="src/img/spolecnefotky/1.jpg" alt="Logo" class="w-[80%] md:w-[75%] object-cover mask-svg" style="opacity:1; transition: opacity 0.5s ease-in-out;">
+      </div>
+      <div class="flex flex-col w-full md:w-2/5 items-center md:items-center justify-center">
+        <h2 class="dela-gothic text-center text-custom-green text-[3rem] sm:text-[4rem] md:text-[5.2rem] font-black mb-8 md:mb-[3.0rem]">O NÁS</h2>
+        <ul class="mb-14 sm:mb-0 space-y-6 sm:space-y-8 md:space-y-10 text-xl sm:text-2xl md:text-2xl text-white roboto font-normal">
+          <li class="flex items-center gap-6">
+            <svg class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] fill-[#478D52]" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"></path>
+            </svg>
+            <span>Jeden trenér, spousta cílů</span>
+          </li>
+          <li class="flex items-center gap-6">
+            <svg class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] fill-[#478D52]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path>
+            </svg>
+            <span>Různí lidi, stejný směr</span>
+          </li>
+          <li class="flex items-center gap-6">
+            <svg class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] fill-[#478D52]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path>
+            </svg>
+            <span>Dřeme a podporujeme se</span>
+          </li>
+          <li class="flex items-center gap-6">
+            <img src="src/img/sword-svgrepo-com.svg" class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] object-contain" alt="Meč">
+            <span>Máme vlastní meč</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="-skew-y-3 bg-neutral-900 transform pb-12 -mb-[90px]">
+    <div class="p-6 -mt-10 inset-0 bg-divider"></div>
+  </div>
+
+  <section class="container mx-auto bg-neutral-900 text-white py-16 flex flex-col items-center px-4">
+    <h2 class="dela-gothic text-custom-green text-[3rem] sm:text-[4rem] md:text-[5.2rem] font-black mb-2 md:mb-2 z-2 text-center">PROMĚNY ČLENŮ</h2>
+    <div class="flex flex-row sm:flex-row gap-4 sm:gap-8 mb-8">
+      <button id="menTab" class="roboto text-xl sm:text-xl bg-custom-green text-white font-semibold px-4 sm:px-10 py-2 rounded-sm focus:outline-none">MUŽI</button>
+      <button id="womenTab" class="roboto text-xl sm:text-xl bg-divider text-white font-semibold px-4 sm:px-10 py-2 rounded-sm focus:outline-none">ŽENY</button>
+    </div>
+
+    <div class="w-full max-w-full sm:max-w-xl rounded-sm">
+      <div id="menSwiper" class="swiper">
+        <div class="swiper-wrapper flex items-center">
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/1.jpg" alt="Men Slide 1" class="w-full rounded-sm">
+            <div class="caption text-center">Rekompozice</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/2.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Rekompozice</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/3.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Hubnoucí fáze</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/4.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Hubnoucí + nabírací fáze</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/5.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Rekompozice</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/6.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Rekompozice</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/7.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Hubnoucí + nabírací fáze</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/8.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Hubnoucí fáze</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/9.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Hubnoucí fáze</div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/muzi/10.jpg" alt="Men Slide 2" class="w-full rounded-sm">
+            <div class="caption text-center">Hubnoucí fáze</div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="men-pagination swiper-pagination"></div>
+
+
+
+      <div id="womenSwiper" class="swiper" style="display: none;">
+        <div class="swiper-wrapper flex items-center -mt-4">
+          <div class="swiper-slide">
+            <img src="src/promeny/zeny/1.jpg" alt="Women Slide 1" class="w-full rounded-sm">
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/zeny/2.jpg" alt="Women Slide 1" class="w-full rounded-sm">
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/zeny/3.jpg" alt="Women Slide 1" class="w-full rounded-sm">
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/zeny/4.jpg" alt="Women Slide 1" class="w-full rounded-sm">
+          </div>
+          <div class="swiper-slide">
+            <img src="src/promeny/zeny/5.jpg" alt="Women Slide 1" class="w-full rounded-sm">
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+      </div>
+      <div class="women-pagination swiper-pagination"></div>
+</div>
+  </section>
+
+  <div class="skew-y-3 bg-neutral-900 transform pb-12 -mb-[90px]">
+    <div class="p-6 -mt-10 inset-0 bg-divider"></div>
+  </div>
+
+   <section class="container mx-auto bg-neutral-900 text-white py-16 flex flex-col items-center px-4">
+    <h2 class="dela-gothic text-custom-green text-[3rem] sm:text-[4rem] md:text-[5.2rem] font-black mb-4 md:mb-8 z-2 text-center">REFERENCE</h2>
+ <div class="w-full max-w-2xl">
+    <div id="videoSwiper" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <iframe
+            class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
+            src="https://www.youtube.com/embed/EdHeLhQQQAc?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="swiper-slide">
+            <iframe
+            class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
+            src="https://www.youtube.com/embed/CjkZBI9YhFo?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="swiper-slide">
+                    <iframe
+                    class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
+                    src="https://www.youtube.com/embed/bAgLCxMcTcs?enablejsapi=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+        </div>
+        <div class="swiper-slide">
+            <iframe
+            class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
+            src="https://www.youtube.com/embed/4oCIkioXJoQ?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="yt-pagination swiper-pagination mt-5"></div>
+    </div>
+    
+  </div>
+</section>
+
+<div class="-skew-y-3 bg-neutral-900 transform pb-12 -mb-[90px]">
+    <div class="p-6 -mt-10 inset-0 bg-divider"></div>
+  </div>
+
+  <section class="container mx-auto bg-neutral-900 text-white py-16 flex flex-col items-center px-4 mb-5">
+    <h2 class="dela-gothic text-custom-green text-[3rem] sm:text-[4rem] md:text-[5.2rem] font-black mb-4 md:mb-4 z-2 text-center">ZÁVODY</h2>
+    <div class="h-[70vh] sm:h-[45vh] w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="overflow-hidden">
+          <img src="src/img/zavody/1-scaled.jpeg" alt="Gallery Image 1" class="w-full h-full object-cover">
+        </div>
+        <div class="overflow-hidden">
+          <img src="src/img/zavody/2-scaled.jpeg" alt="Gallery Image 2" class="w-full h-full object-cover">
+        </div>
+        <div class="overflow-hidden">
+          <img src="src/img/zavody/3-scaled.jpeg" alt="Gallery Image 3" class="w-full h-full object-cover">
+        </div>
+        <div class="overflow-hidden ">
+          <img src="src/img/zavody/IMG_9854.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+        </div>
+        <div class="overflow-hidden">
+          <img src="src/img/zavody/Snimek-obrazovky-2024-11-13-vˇ18.06.06-scaled.png" alt="Gallery Image 5" class="w-full h-full object-cover">
+        </div>
+        <div class="overflow-hidden">
+          <img src="src/img/zavody/Snimek-obrazovky-2024-11-18-vˇ13.57.33.png" alt="Gallery Image 6" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      </section>
+<div class="skew-y-3 bg-neutral-900 transform pb-12 -mb-[90px]">
+<div class="p-6 -mt-10 inset-0 bg-divider"></div>
+ </div>
+
+ <section class="container mx-auto bg-neutral-900 text-white py-16 flex flex-col items-center px-4">
+    <h2 class="dela-gothic text-custom-green text-[3rem] sm:text-[4rem] md:text-[5.2rem] font-black mb-4 md:mb-8 z-2 text-center">SLUŽBY</h2>
+    <div class="flex flex-col md:flex-row gap-8 max-w-6xl w-full">
+
+        <div class="flex flex-col w-full md:w-1/3 border border-neutral-800 p-6 rounded-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div class="ribbon text-neutral-600">ONLINE COACHING</div>
+          <h3 class="dela-gothic text-custom-green text-2xl font-extrabold border-b border-custom-green pb-2 mb-6">3 MĚSÍCE</h2>
+          <p class="text-xl font-semibold mb-6">12 000 Kč</p>
+          <ul class="space-y-3 flex-1">
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Spánkový protokol</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Individuální stravovací plán</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Tréninkový plán na míru</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Týdenní kontrola pokroku</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Osobní komunikace</span></li>
+          </ul>
+          <a href="sluzby.html"><button class="mt-6 bg-custom-green text-gray-900 font-bold py-2 rounded w-full hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer">VYBRAT</button></a>
+        </div>
+    
+        <div class="flex flex-col w-full md:w-1/3 border border-neutral-800 p-6 rounded-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div class="ribbon text-neutral-600">ONLINE COACHING</div>
+          <h3 class="dela-gothic text-custom-green text-2xl font-extrabold border-b border-custom-green pb-2 mb-6">6 MĚSÍCŮ</h2>
+          <p class="text-xl font-semibold mb-6">20 000 Kč</p>
+          <ul class="space-y-3 flex-1">
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Spánkový protokol</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Individuální stravovací plán</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Tréninkový plán na míru</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Týdenní kontrola pokroku</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Osobní komunikace</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">+</span><span>Členství ve skupině Go Beyond</span></li>
+          </ul>
+          <a href="sluzby.html"><button class="mt-6 bg-custom-green text-gray-900 font-bold py-2 rounded w-full hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer">VYBRAT</button></a> 
+        </div>
+    
+        <div class="flex flex-col w-full md:w-1/3 border border-neutral-800 p-6 rounded-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+          <div class="ribbon text-neutral-600">ONLINE COACHING</div>
+          <h3 class="dela-gothic text-custom-green text-2xl font-extrabold border-b border-custom-green pb-2 mb-6">12 MĚSÍCŮ</h3>
+          <p class="text-xl font-semibold mb-6">35 000 Kč</p>
+          <ul class="space-y-3 flex-1">
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Spánkový protokol</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Individuální stravovací plán</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Tréninkový plán na míru</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Týdenní kontrola pokroku</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Osobní komunikace</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">✓</span><span>Členství ve skupině Go Beyond</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">+</span><span>Sezení s psychologem v ceně</span></li>
+            <li class="flex items-center space-x-2"><span class="text-custom-green font-bold">+</span><span>Doživotní členství na Go Beyond akce</span></li>
+          </ul>
+          <a href="sluzby.html"><button class="mt-6 bg-custom-green text-gray-900 font-bold py-2 rounded w-full hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer">VYBRAT</button></a>
+        </div>
+    
+      </div>
+
+      <div class="w-full flex justify-center mt-8 max-w-6xl">
+        <div class="flex flex-col md:flex-row w-full max-w-7xl gap-x-8">
+          
+          <div class="flex flex-col border border-neutral-800 p-6 rounded-md md:w-1/2 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <h3 class="dela-gothic text-custom-green text-2xl font-extrabold border-b border-custom-green pb-2 mb-6">ŘEŠENÍ AKNÉ</h3>
+            <p class="text-xl mb-6">Akné není jen kosmetika. Pomůžeme najít příčinu – přes stravu, návyky i stres. Klidně i bez drahých krémů.</p>
+            <p class="text-xl font-semibold mb-6">1 500 Kč</p>
+            <a href="sluzby.html"><button class="mt-6 bg-custom-green text-gray-900 font-bold py-2 rounded w-full hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer">VYBRAT</button></a>
+          </div>
+          
+          <div class="flex flex-col border border-neutral-800 p-6 rounded-md md:w-1/2 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <h3 class="dela-gothic text-custom-green text-2xl font-extrabold border-b border-custom-green pb-2 mb-6">KONZULTACE</h3>
+            <p class="text-xl mb-6">Chceš probrat stravu, trénink nebo životní styl? Domluv si konzultaci a probereme, co tě pálí – v klidu, věcně, bez zbytečných složitosti.</p>
+            <p class="text-xl font-semibold mb-6">2 000 Kč</p>
+            <a href="sluzby.html"><button class="mt-6 bg-custom-green text-gray-900 font-bold py-2 rounded w-full hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer">VYBRAT</button></a>
+          </div>
+          
+        </div>
+      </div>
+ </section>
+        <div class="p-6 -mt-4 inset-0 bg-divider"></div>
+
+         <section class="cta-gradient-bg text-white py-16 flex flex-col items-center px-4">
+            <div class="container mx-auto flex items-center justify-center flex-col">
+            <h3 class="dela-gothic text-white text-xl sm:text-2xl md:text-3xl font-black mb-4 md:mb-8 z-2 text-center">ZMĚŇ SVOJE TĚLO I HLAVU.<br>
+                TRÉNUJ S GO BEYOND TEAM.</h2>
+                <p class="text-lg sm:text-xl text-center">Vyber si službu a staň se členem týmu. Přidej se ke komunitě, která na sobě maká.</p>
+               <a href="sluzby.html"> <button class="text-2xl mt-6 bg-divider text-white font-bold py-6 rounded w-full sm:w-1/5 hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer">VYBRAT SLUŽBU</button></a>
+            </div>
+         </section>
+         <div class="p-6 -mt-4 inset-0 bg-divider"></div>
+
+
+         <section class="container mx-auto bg-neutral-900 text-white py-8 flex flex-col items-center px-4">
+          <h2 class="dela-gothic text-custom-green text-[3rem] sm:text-[4rem] md:text-[5.2rem] font-black mb-0 md:mb-0 z-2 text-center">FAQ</h2>
+          <div class="w-3/4 mx-auto p-2 font-sans text-gray-900 dark:text-gray-100">
+            <div class="mb-2 bg-divider rounded shadow-sm">
+              <button aria-expanded="true" aria-controls="faq1-content" id="faq1-btn"
+                class="cursor-pointer bg-divider text-white w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-lg focus:outline-none rounded-t">
+                <span>Jak probíhá platba za služby?</span>
+                <svg class="w-6 h-6 transition-transform duration-300 rotate-180" id="faq1-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+              <div id="faq1-content" role="region" aria-labelledby="faq1-btn" class="slide-content active text-white px-4">
+                <p>Platbu je možné rozdělit do několika částí podle domluvy. Cílem je, aby to bylo co nejpohodlnější. Stačí se ozvat a domluvíme ideální variantu.</p>
+              </div>
+            </div>
+          
+            <div class="mb-2 bg-divider rounded shadow-sm">
+              <button aria-expanded="false" aria-controls="faq2-content" id="faq2-btn"
+                class="cursor-pointer w-full text-white flex justify-between items-center px-4 py-3 text-left font-semibold text-lg focus:outline-none rounded-t">
+                <span>Potřebuji být předem ve formě, abych mohl začít trénovat?</span>
+                <svg class="w-6 h-6 transition-transform duration-300 transform rotate-0" id="faq2-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+              <div id="faq2-content" role="region" aria-labelledby="faq2-btn" class="slide-content text-white px-4">
+                <p>Vůbec ne. Tréninky jsou přizpůsobené každému na míru – bez ohledu na to, jestli začínáš, nebo už máš něco za sebou. Společně začneme tam, kde právě jsi, a budeme postupně budovat kondici.</p>
+              </div>
+            </div>
+          
+            <div class="mb-2 bg-divider rounded shadow-sm">
+              <button aria-expanded="false" aria-controls="faq3-content" id="faq3-btn"
+                class="cursor-pointer w-full text-white flex justify-between items-center px-4 py-3 text-left font-semibold text-lg focus:outline-none rounded-t">
+                <span>Je účast na týmových akcích povinná?</span>
+                <svg class="w-6 h-6 transition-transform duration-300 transform rotate-0" id="faq3-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+              <div id="faq3-content" role="region" aria-labelledby="faq3-btn" class="slide-content text-white px-4">
+                <p>Ne, účast na týmových akcích není povinná. Je zcela dobrovolná a záleží na každém, jestli se chce zapojit.</p>
+              </div>
+            </div>
+          
+            <div class="mb-2 bg-divider rounded shadow-sm">
+              <button aria-expanded="false" aria-controls="faq4-content" id="faq4-btn"
+                class="cursor-pointer w-full text-white flex justify-between items-center px-4 py-3 text-left font-semibold text-lg focus:outline-none rounded-t">
+                <span>Kolik je v týmu míst?</span>
+                <svg class="w-6 h-6 transition-transform duration-300 transform rotate-0" id="faq4-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+              <div id="faq4-content" role="region" aria-labelledby="faq4-btn" class="slide-content text-white px-4">
+                <p>Počet míst v týmu je omezený, abych mohl každému věnovat individuální pozornost. Celkový počet míst je 40 lidí. Pokud máš zájem, dej mi vědět co nejdřív – rád ti řeknu, jaká je aktuální situace.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-20 text-xs flex flex-col items-center justify-center text-center ">
+            <p class="font-bold leading-4">Mgr. Martin Rozumek</p>
+            <p class="leading-4">
+              IČO: 21770808
+              <br>
+              Babice 460, 687 03
+              <br>
+              Fyzická osoba podnikající dle živnostenského zákona
+              <br>
+              Zapsán v živnostenském rejstříku vedeném Městským úřadem Uherské Hradiště
+            </p>
+          </div>
+        </section>
+
+    <footer class="container mx-auto flex flex-col items-center mb-10">
+      <h3 class="dela-gothic text-white text-[1rem] sm:text-[1rem] md:text-[2rem] font-black mb-2 md:mb-3 z-2 text-center">GO BEYOND TEAM.</h3>
+      <div class="flex flex-row items-center gap-10 cursor-pointer">
+        <a href="https://www.facebook.com/profile.php?id=100091285305525">
+        <svg class="w-[25px] h-[25px] fill-[#ffffff]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+          <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+        
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/bilkovinovy_princ/">
+      <svg class="w-[25px] h-[25px] fill-[#ffffff]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+      
+      </svg>
+    </a>
+    <a href="https://www.youtube.com/@Bílkovinovýprinc">
+      <svg class="w-[25px] h-[25px] fill-[#ffffff]" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+      
+      </svg>
+    </a>
+
+      </div>
+    </footer>
+
+    <div id="lightbox-overlay">
+      <span id="lightbox-close">&times;</span>
+      <img src="" alt="Enlarged image" />
+    </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

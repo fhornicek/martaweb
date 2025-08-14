@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO BEYOND TEAM</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="bg-custom-dark roboto tracking-wide">
+  <section class="container mx-auto">
+  <div class="mt-10 mb-8">
+    <a href="index.html">
+    <button class="flex items-center gap-2 text-white hover:text-custom-green">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Zpět na hlavní stránku
+    </button>
+  </a>
+  </div>
+
+  <h1 class="dela-gothic text-custom-green font-black text-4xl md:text-8xl text-center mb-6 select-none">FORMULÁŘE</h1>
+
+  <div class="flex justify-center gap-4 mb-8">
+    <button data-tab="coaching" class="roboto tab-btn bg-custom-green text-white px-5 py-3 rounded font-semibold transition duration-300">ONLINE COACHING</button>
+    <button data-tab="consult" class="roboto tab-btn bg-divider text-white px-5 py-3 rounded font-semibold transition duration-300 hover:bg-gray-700 ">KONZULTACE</button>
+    <button data-tab="acne" class="roboto tab-btn bg-divider text-white px-5 py-3 rounded font-semibold transition duration-300 hover:bg-gray-700">ŘEŠENÍ AKNÉ</button>
+  </div>
+
+
+  <div class="max-w-xl sm:max-w-4xl mx-auto space-y-6">
+    <form id="coaching" onsubmit="return sendform(); return false;" class="tab-content max-w-4xl mx-auto py-6 px-10 bg-custom-dark rounded-lg text-white font-sans bg-divider">
+      <label class="block mb-4">
+        Jméno a příjmení<br />
+        <input type="text" name="jmeno" placeholder="např. Jan Novák" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        E-mail<br />
+        <input type="email" name="your-email" placeholder="email@email.cz" autocomplete="email" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Věk, váha a výška<br />
+        <input type="text" name="vek" placeholder="např. 25 let" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black mb-1 focus:border-custom-green focus:outline-none" />
+        <input type="text" name="vaha" placeholder="např. 68 kg" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black mb-1 focus:border-custom-green focus:outline-none" />
+        <input type="text" name="vyska" placeholder="např. 175 cm" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Obvod pasu (v cm)<br/>
+        <input type="text" name="pas" placeholder="např. 75 cm" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Jak dlouho pravidelně cvičíš?<br/>
+        <input type="text" name="delkacviceni" placeholder="např. 1 rok, nepravidelně 3 roky..." required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Jaký je tvůj hlavní cíl?<br/>
+        <textarea name="cil" placeholder="např. nabrat svaly, zhubnout, zlepšit kondici..." required
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Jaké potraviny aktuálně nejčastěji volíš?<br/>
+        <textarea name="jidlo" placeholder="např. rýže, kuře, zelenina, pečivo..." required
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Kolik kalorií zhruba denně přijmeš?<br/>
+        <input type="text" name="kalorie" placeholder="např. 2200 kcal" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Jak bys zhodnotil(a) své stravovací návyky?<br/>
+        <textarea name="stravovaci_navyky" placeholder="např. pravidelná strava, časté mlsání, přeskakování jídel..." required
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Jsi spíš jedlík nebo ti stačí málo?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" id="jedlik1" name="jedlik" value="Jedlík" required class="form-radio text-custom-green" />
+          <span class="ml-2">Jedlík</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" id="jedlik2" name="jedlik" value="Stačí mi málo" class="form-radio text-custom-green" />
+          <span class="ml-2">Stačí mi málo</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Kolikrát denně ti vyhovuje jíst?<br/>
+        <input type="number" name="pocet_jidel" min="1" max="10" placeholder="např. 4" required
+               class="mt-1 w-24 rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Preferuješ spíše kombinaci více potravin, nebo jednoduchost?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" id="preference1" name="preference_jidla" value="Kombinace více potravin" required class="form-radio text-custom-green" />
+          <span class="ml-2">Kombinace více potravin</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" id="preference2" name="preference_jidla" value="Jednoduchá jídla" class="form-radio text-custom-green" />
+          <span class="ml-2">Jednoduchá jídla</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Intolerance nebo alergie (pokud máš)<br/>
+        <textarea name="intolerance" placeholder="např. oříšky"
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Jaké suplementy aktuálně používáš?<br/>
+        <textarea name="suplementy" placeholder="např. protein, kreatin, vitamín D..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Bereš nějaké léky? Pokud ano, uveď jaké.<br/>
+        <textarea name="leky" placeholder="Medicinol 250 mg"
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Kolikrát týdně chceš cvičit?<br/>
+        <input type="number" name="treninky_tydne" min="1" max="14" placeholder="např. 4" required
+               class="mt-1 w-24 rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Na škále 1–10: Jak moc jsi denně ve stresu?<br/>
+        <input type="number" name="stres" min="0" max="10" required
+               class="mt-1 w-24 rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Jak moc jsi aktivní během dne? (počet kroků, kardio apod.)<br/>
+        <textarea name="aktivita" placeholder="např. sedavé zaměstnání, 5000 kroků"
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Máš nějaká zranění nebo fyzická omezení?<br/>
+        <textarea name="zraneni" placeholder="např. utržený biceps"
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Jak bys ohodnotil(a) svou disciplínu od 1 do 10?<br/>
+        <input type="number" name="disciplina" min="0" max="10" required
+               class="mt-1 w-24 rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Jaké máš zaměstnání?<br/>
+        <input type="text" name="prace" placeholder="např. kancelář, směny, fyzická práce..." required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Kouříš? Piješ alkohol?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" id="kouzim" name="navyky[]" value="Kouřím" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Kouřím</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" id="pijualko" name="navyky[]" value="Piji alkohol" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Piji alkohol</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="aninedo" name="navyky[]" value="Ani jedno" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Ani jedno</span>
+        </label>
+      </fieldset>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">(Pro ženy) Máš problémy s menstruačním cyklem?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" id="m1" name="menstruace" value="Ano" required class="form-radio text-custom-green" />
+          <span class="ml-2">Ano</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" id="m2" name="menstruace" value="Ne" class="form-radio text-custom-green" />
+          <span class="ml-2">Ne</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" id="m3" name="menstruace" value="Nevztahuje se na mě" class="form-radio text-custom-green" />
+          <span class="ml-2">Nevztahuje se na mě</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Kolik hodin denně průměrně spíš?<br/>
+        <input type="number" name="spani" min="1" max="12" placeholder="např. 7" required
+               class="mt-1 w-24 rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Chceš sdílet nějaké další informace, které by mohly být důležité?<br/>
+        <textarea name="info_navic"
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Máš nějaký speciální požadavek? (jídlo, trénink, časové možnosti...?)<br/>
+        <textarea name="pozadavek"
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <fieldset class="block mb-6">
+        <legend class="mb-1 font-semibold">Chceš být přidán(a) do společné WhatsApp skupiny?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" id="sk1" name="skupina" value="Ano (spolupráce 6+ měsíců)" required class="form-radio text-custom-green" />
+          <span class="ml-2">Ano (spolupráce 6+ měsíců)</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" id="sk2" name="skupina" value="Ne" class="form-radio text-custom-green" />
+          <span class="ml-2">Ne</span>
+        </label>
+      </fieldset>
+    
+      <button type="submit" class="px-6 py-3 rounded-md bg-custom-green text-white font-semibold hover:bg-green-600 transition-colors">
+        Odeslat
+      </button>
+    </form>
+    <form id="consult" class="tab-content max-w-4xl mx-auto py-6 px-10 bg-custom-dark rounded-lg text-white font-sans bg-divider" onsubmit="return sendform();">
+  
+      <label class="block mb-4">
+        Jméno a příjmení<br />
+        <input type="text" name="jmeno" placeholder="např. Jan Novák" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+      
+      <label class="block mb-4">
+        E-mail<br />
+        <input type="email" name="your-email" autocomplete="email" placeholder="email@email.cz" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+      
+      <label class="block mb-4">
+        Věk<br />
+        <input type="number" name="vek" min="10" max="100" placeholder="např. 28" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+      
+      <label class="block mb-4">
+        Jaký je tvůj hlavní důvod pro konzultaci?<br />
+        <textarea name="duvod" placeholder="např. stagnace výsledků, nevíš jak začít, přechod z diety..." required
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+      
+      <label class="block mb-4">
+        Jaké výsledky bys chtěl/a díky konzultaci získat?<br />
+        <textarea name="cil" placeholder="např. konkrétní změna – fyzická, psychická, zlepšení návyků..." required
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+      
+      <label class="block mb-4">
+        Cvičíš momentálně? Jak často a jak dlouho?<br />
+        <textarea name="cviceni" placeholder="např. 3x týdně, silový trénink, 2 roky..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+      
+      <label class="block mb-4">
+        Máš zkušenosti s výživou?<br />
+        <textarea name="vyziva" placeholder="např. řešil/a jsem makra, diety, výživové poradenství..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+      
+      <label class="block mb-4">
+        Kolik času máš aktuálně týdně na trénink / péči o sebe?<br />
+        <input type="text" name="cas" placeholder="např. 4–5 hodin týdně"
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+      
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Jak bys popsal/a svou aktuální motivaci?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="motivace" value="Nízká" required class="form-radio text-custom-green" />
+          <span class="ml-2">Nízká</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="motivace" value="Průměrná" class="form-radio text-custom-green" />
+          <span class="ml-2">Průměrná</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="motivace" value="Vysoká" class="form-radio text-custom-green" />
+          <span class="ml-2">Vysoká</span>
+        </label>
+      </fieldset>
+      
+      <label class="block mb-4">
+        Kdy ti většinou nejlépe vyhovuje konzultace?<br />
+        <textarea name="termin" placeholder="např. dopoledne, pondělí odpoledne, čtvrtek večer..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+      
+      <label class="block mb-4">
+        Je něco, co bych měl vědět, abych ti mohl co nejlépe pomoct?<br />
+        <textarea name="info" placeholder="např. zdravotní omezení, aktuální režim, specifika..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+      
+      <button type="submit" class="px-6 py-3 rounded-md bg-custom-green text-white font-semibold hover:bg-green-600 transition-colors">
+        Odeslat
+      </button>
+    
+    </form>
+    <form id="acne" class="tab-content max-w-4xl mx-auto py-6 px-10 bg-custom-dark rounded-lg text-white font-sans bg-divider" onsubmit="return sendform();">
+
+      <label class="block mb-4">
+        Jméno a příjmení<br />
+        <input type="text" name="your-name" autocomplete="name" placeholder="Např. Jana Nováková" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        E-mail<br />
+        <input type="email" name="your-email" autocomplete="email" placeholder="Např. jana@email.cz" required
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Jak dlouho se potýkáte s akné?<br />
+        <input type="text" name="delka" placeholder="Např. 3 roky, od puberty, poslední půlrok..." 
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Kde se akné nejčastěji vyskytuje?<br />
+        <input type="text" name="vyskyt" placeholder="Obličej, záda, hruď, ..." 
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Máte sklony k:</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="sklony[]" value="Mastné pleti" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Mastné pleti</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="sklony[]" value="Suché pleti" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Suché pleti</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" name="sklony[]" value="Citlivé pleti" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Citlivé pleti</span>
+        </label>
+      </fieldset>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Dochází k zarudnění, svědění nebo bolestivým ložiskům?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="zarudnuti" value="Ano" class="form-radio text-custom-green" />
+          <span class="ml-2">Ano</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="zarudnuti" value="Ne" class="form-radio text-custom-green" />
+          <span class="ml-2">Ne</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Jaké produkty nebo procedury jste doposud zkoušeli?<br />
+        <input type="text" name="procedury" placeholder="Kosmetika, doplňky stravy, dermatologická léčba, ..."
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Užíváte nyní nějaké léčivé přípravky na pleť?<br />
+        <input type="text" name="lecba" placeholder="Např. antibiotika, isotretinoin, retinoidy..."
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Užíváte nyní nějaké doplňky stravy? Pokud ano, jaké?<br />
+        <input type="text" name="doplnky" placeholder="Např. zinek, probiotika, omega-3, vitamíny..."
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Máte zkušenosti s odborníkem na výživu nebo dermatologem?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="zkušenosti" value="Ano" class="form-radio text-custom-green" />
+          <span class="ml-2">Ano</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="zkušenosti" value="Ne" class="form-radio text-custom-green" />
+          <span class="ml-2">Ne</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Znáte své makroživiny (bílkoviny, tuky a sacharidy za den)?<br />
+        <input type="text" name="makroziviny" placeholder="Např. 100 g bílkovin, 200 g sacharidů..."
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Jaká je vaše strava?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="strava" value="Vyvážená" class="form-radio text-custom-green" />
+          <span class="ml-2">Vyvážená</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="strava" value="Často průmyslově zpracované potraviny / fastfood / restaurace" class="form-radio text-custom-green" />
+          <span class="ml-2">Často průmyslově zpracované potraviny / fastfood / restaurace</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="strava" value="Vegetarián/veganská" class="form-radio text-custom-green" />
+          <span class="ml-2">Vegetarián/veganská</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="strava" value="Keto/paleo/carnivore" class="form-radio text-custom-green" />
+          <span class="ml-2">Keto/paleo/carnivore</span>
+        </label>
+      </fieldset>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Konzumujete pravidelně:</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="konzument[]" value="Mléčné výrobky" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Mléčné výrobky</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="konzument[]" value="Lepek" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Lepek</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="konzument[]" value="Cukr" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Cukr</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" name="konzument[]" value="Alkohol" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Alkohol</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Kolik vody denně přibližně vypijete?<br />
+        <input type="text" name="voda" placeholder="Např. 2 litry denně"
+               class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black focus:border-custom-green focus:outline-none" />
+      </label>
+    
+      <label class="block mb-4">
+        Máte zařazené pravidelné pohybové aktivity? Jaké?<br />
+        <textarea name="pohyb" placeholder="Např. běh, jóga, posilovna 3× týdně..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Jaký je váš spánkový režim? (čas usínání, délka spánku, časté buzení)<br />
+        <textarea name="spanek" placeholder="Např. spím od 23:00 do 7:00, časté buzení..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Pociťujete dlouhodobě stres? Jaký způsob relaxace využíváte?<br />
+        <textarea name="stres" placeholder="Např. ano, pracuji pod tlakem. Relaxace: procházky, meditace..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Máte pravidelný menstruační cyklus (pro ženy)?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="menstruace" value="Ano" class="form-radio text-custom-green" />
+          <span class="ml-2">Ano</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="menstruace" value="Ne" class="form-radio text-custom-green" />
+          <span class="ml-2">Ne</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="menstruace" value="Nevztahuje se na mě" class="form-radio text-custom-green" />
+          <span class="ml-2">Nevztahuje se na mě</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Užíváte antikoncepci? Pokud ano, jakou a jak dlouho?<br />
+        <textarea name="antikoncepce" placeholder="Např. hormonální pilulky 3 roky, nitroděložní tělísko..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Máte zažívací potíže (nadýmání, nepravidelná stolice, reflux apod.)?<br />
+        <textarea name="zazivani" placeholder="Např. časté nadýmání, zácpa, reflux..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Byla vám někdy diagnostikována:</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="diagnozy[]" value="Hormonální nerovnováha" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Hormonální nerovnováha</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="diagnozy[]" value="PCOS" class="form-checkbox text-custom-green" />
+          <span class="ml-2">PCOS</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="diagnozy[]" value="SIBO / kandidóza / jiné infekce" class="form-checkbox text-custom-green" />
+          <span class="ml-2">SIBO / kandidóza / jiné infekce</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="diagnozy[]" value="Autoimunitní onemocnění" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Autoimunitní onemocnění</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="checkbox" name="diagnozy[]" value="Problémy s játry / žlučníkem" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Problémy s játry / žlučníkem</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" name="diagnozy[]" value="Nevím o ničem" class="form-checkbox text-custom-green" />
+          <span class="ml-2">Nevím o ničem</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Jaké jsou vaše hlavní cíle v péči o pleť?<br />
+        <textarea name="cile" placeholder="Např. snížit výskyt akné, zlepšit texturu pleti..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Co vás motivuje ke změně?<br />
+        <textarea name="motivace" placeholder="Např. zlepšení sebevědomí, zdravější životní styl..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Jste otevřeni změnám ve stravě a doplňcích?</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="otevrenost" value="Ano" class="form-radio text-custom-green" />
+          <span class="ml-2">Ano</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="otevrenost" value="Částečně" class="form-radio text-custom-green" />
+          <span class="ml-2">Částečně</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="otevrenost" value="Ne" class="form-radio text-custom-green" />
+          <span class="ml-2">Ne</span>
+        </label>
+      </fieldset>
+    
+      <fieldset class="block mb-4">
+        <legend class="mb-1 font-semibold">Preferujete:</legend>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="preference" value="Komplexní vedení včetně výživy, doplňků a skincare" class="form-radio text-custom-green" />
+          <span class="ml-2">Komplexní vedení včetně výživy, doplňků a skincare</span>
+        </label>
+        <label class="inline-flex items-center mr-4 cursor-pointer">
+          <input type="radio" name="preference" value="Spíše jen péči o pleť a kosmetické poradenství" class="form-radio text-custom-green" />
+          <span class="ml-2">Spíše jen péči o pleť a kosmetické poradenství</span>
+        </label>
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="radio" name="preference" value="Jiné" class="form-radio text-custom-green" />
+          <span class="ml-2">Jiné</span>
+        </label>
+      </fieldset>
+    
+      <label class="block mb-4">
+        Máte nějaké alergie nebo intolerance?<br />
+        <textarea name="alergie" placeholder="Např. laktóza, lepek, nikl, žádné..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <label class="block mb-4">
+        Jakékoliv další informace, které bych měl vědět:<br />
+        <textarea name="dalsi_info" placeholder="Např. konkrétní situace, na které chcete zaměřit péči..."
+                  class="mt-1 w-full rounded-md border border-gray-600 bg-white p-2 text-black resize-y focus:border-custom-green focus:outline-none"></textarea>
+      </label>
+    
+      <button type="submit" class="px-6 py-3 rounded-md bg-custom-green text-white font-semibold hover:bg-green-600 transition-colors">
+        Odeslat
+      </button>
+    
+    </form>
+    
+  
+  
+  </div>
+
+</section>
+
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  function activateTab(tabName) {
+    tabs.forEach(tab => {
+      if (tab.dataset.tab === tabName) {
+        tab.classList.add('bg-custom-green', 'text-black');
+        tab.classList.remove('bg-divider', 'text-gray-300');
+      } else {
+        tab.classList.remove('bg-custom-green', 'text-black');
+        tab.classList.add('bg-divider', 'text-gray-300');
+      }
+    });
+
+    contents.forEach(content => {
+      if (content.id === tabName) {
+        content.classList.remove('hidden');
+      } else {
+        content.classList.add('hidden');
+      }
+    });
+  }
+
+  activateTab('coaching');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      activateTab(tab.dataset.tab);
+    });
+  });
+</script>
+<script src="script.js"></script>
+</body>
