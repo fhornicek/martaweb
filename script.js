@@ -37,9 +37,9 @@ menTabBtn.addEventListener('click', () => {
   womenPagination.style.display = 'none';
 
   menTabBtn.classList.add('bg-custom-green');
-  menTabBtn.classList.remove('bg-neutral-700');
+  menTabBtn.classList.remove('bg-divider');
   womenTabBtn.classList.remove('bg-custom-green');
-  womenTabBtn.classList.add('bg-neutral-700');
+  womenTabBtn.classList.add('bg-divider');
 
   menSwiper.update();
 });
@@ -59,7 +59,7 @@ womenTabBtn.addEventListener('click', () => {
   womenSwiper.update();
 });
 
-const words = ["LIMITS.", "PAIN.", "DOUBT.", "TEAM."];
+const words = ["TEAM.", "LIMITS.", "PAIN.", "DOUBT."];
 const teamEl = document.getElementById("team");
 let index = 0;
 
@@ -93,19 +93,6 @@ index = 1;
 setInterval(slideWords, 4000);
 
 
-
-
-let tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.head.appendChild(tag);
-
-let players = [];
-function onYouTubeIframeAPIReady() {
-  document.querySelectorAll('#videoSwiper iframe').forEach((iframe, index) => {
-    players[index] = new YT.Player(iframe);
-  });
-}
-
 const videoSwiper = new Swiper('#videoSwiper', {
   loop: false,
   navigation: {
@@ -118,20 +105,20 @@ const videoSwiper = new Swiper('#videoSwiper', {
   },
   slidesPerView: 1,
   spaceBetween: 10,
-
-  on: {
-    slideChange: function () {
-      players.forEach((player, i) => {
-        if (player && player.pauseVideo) {
-          if (i === this.realIndex) {
-          } else {
-            player.pauseVideo();
-          }
-        }
-      });
-    }
-  }
 });
+
+
+  videoSwiper.on('slideChange', () => {
+    const iframes = document.querySelectorAll('#videoSwiper iframe');
+    iframes.forEach(iframe => {
+      iframe.contentWindow.postMessage(
+        JSON.stringify({ event: "command", func: "stopVideo", args: [] }),
+        "*"
+      );
+    });
+  });
+
+
 
 
 document.querySelectorAll('button[id^="faq"]').forEach(btn => {

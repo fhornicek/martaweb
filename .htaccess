@@ -1,0 +1,78 @@
+# -----------------------------------------
+# Zapnutí komprese (gzip)
+# -----------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript application/json image/svg+xml
+</IfModule>
+
+# -----------------------------------------
+# Zapnutí komprese Brotli (pokud je k dispozici)
+# -----------------------------------------
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript application/json image/svg+xml
+</IfModule>
+
+# -----------------------------------------
+# Nastavení cache pro statická data
+# -----------------------------------------
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ico|jpe?g|png|gif|webp|svg|js|css|woff2?|eot|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+# -----------------------------------------
+# Expire headers pro prohlížeče
+# -----------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  ExpiresByType application/font-sfnt "access plus 1 year"
+  ExpiresDefault "access plus 1 hour"
+</IfModule>
+
+# -----------------------------------------
+# ETag a Last-Modified
+# -----------------------------------------
+FileETag MTime Size
+
+# -----------------------------------------
+# Povolit Keep-Alive
+# -----------------------------------------
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+# -----------------------------------------
+# HTTP/2 Push (pokud server podporuje)
+# -----------------------------------------
+<IfModule http2_module>
+  H2PushResource /src/output.css
+  H2PushResource /src/img/gbtlogo.png
+  H2PushResource /script.min.js
+  H2PushResource https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap
+  H2PushResource https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap
+</IfModule>
+
+# -----------------------------------------
+# Rychlé ukončení pro neexistující statická data
+# -----------------------------------------
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} \.(ico|jpe?g|png|gif|webp|svg|js|css|woff2?|eot|ttf|otf)$ [NC]
+RewriteRule . - [R=404,L]

@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css" />
 </head>
 <body class="bg-custom-dark roboto tracking-wide">
 
@@ -184,44 +185,16 @@
     <div id="videoSwiper" class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <iframe
-            class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
-            src="https://www.youtube.com/embed/EdHeLhQQQAc?enablejsapi=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+          <lite-youtube videoid="EdHeLhQQQAc" js-api playlabel="" params="enablejsapi=1" class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"></lite-youtube>
         </div>
         <div class="swiper-slide">
-            <iframe
-            class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
-            src="https://www.youtube.com/embed/CjkZBI9YhFo?enablejsapi=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+          <lite-youtube videoid="CjkZBI9YhFo" js-api playlabel="" params="enablejsapi=1" class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"></lite-youtube>
         </div>
         <div class="swiper-slide">
-                    <iframe
-                    class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
-                    src="https://www.youtube.com/embed/bAgLCxMcTcs?enablejsapi=1"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    loading="lazy"
-                  ></iframe>
+          <lite-youtube videoid="bAgLCxMcTcs" js-api playlabel="" params="enablejsapi=1" class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"></lite-youtube>
         </div>
         <div class="swiper-slide">
-            <iframe
-            class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"
-            src="https://www.youtube.com/embed/4oCIkioXJoQ?enablejsapi=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+          <lite-youtube videoid="4oCIkioXJoQ" js-api playlabel="" params="enablejsapi=1" class="w-56 h-96 sm:w-72 sm:h-[430px] md:w-80 md:h-[600px] mx-auto"></lite-youtube>
         </div>
       </div>
       <div class="swiper-button-prev"></div>
@@ -342,7 +315,7 @@
             <div class="container mx-auto flex-col flex items-center justify-center">
             <h3 class="dela-gothic text-white text-xl sm:text-2xl md:text-3xl font-black mb-4 md:mb-8 z-2 text-center">ZMĚŇ SVOJE TĚLO I HLAVU.<br>
                 TRÉNUJ S GO BEYOND TEAM.</h2>
-                <p class="text-lg sm:text-xl text-center">Vyber si službu a staň se členem týmu. Přidej se ke komunitě, která na sobě maká.</p>
+                <p class="text-lg sm:text-xl text-center">Vyber si službu a staň se členem týmu. Přidej se ke komunitě, která má stejný směr.</p>
                 <a href="sluzby.html" class="w-full flex justify-center"> 
                   <button class="w-3/4 md:w-1/2 text-2xl mt-6 bg-divider text-white font-bold py-6 rounded hover:text-white transition-transform hover:scale-105 duration-100 ease-in-out cursor-pointer max-w-md">
                     VYBRAT SLUŽBU
@@ -424,7 +397,10 @@
         </section>
 
     <footer class="container mx-auto flex flex-col items-center mb-10">
+      <divv class="flex flex-col items-center">
+        <img src="src/img/gbtlogo.png" class="w-1/2 h-auto mx-auto -mb-6" alt="Go Beyond Team Logo">
       <h3 class="dela-gothic text-white text-[1rem] sm:text-[1rem] md:text-[2rem] font-black mb-2 md:mb-3 z-2 text-center">GO BEYOND TEAM.</h3>
+    </div>
       <div class="flex flex-row items-center gap-10 cursor-pointer">
         <a href="https://www.facebook.com/profile.php?id=100091285305525">
         <svg class="w-[25px] h-[25px] fill-[#ffffff]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -456,8 +432,9 @@
       <img src="" alt="Enlarged image" />
     </div>
 
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="script.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="script.min.js" defer></script>
+  <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js" defer></script>
 </body>
 </html>
