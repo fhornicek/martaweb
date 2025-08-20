@@ -108,15 +108,18 @@ const videoSwiper = new Swiper('#videoSwiper', {
 });
 
 
-  videoSwiper.on('slideChange', () => {
-    const iframes = document.querySelectorAll('#videoSwiper iframe');
-    iframes.forEach(iframe => {
+videoSwiper.on('slideChange', () => {
+  const liteEmbeds = document.querySelectorAll('#videoSwiper lite-youtube');
+  liteEmbeds.forEach(embed => {
+    const iframe = embed.querySelector('iframe');
+    if (iframe && iframe.contentWindow) {
       iframe.contentWindow.postMessage(
         JSON.stringify({ event: "command", func: "stopVideo", args: [] }),
         "*"
       );
-    });
+    }
   });
+});
 
 
 
